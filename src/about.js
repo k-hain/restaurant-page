@@ -1,6 +1,8 @@
 import phoneSvg from './svg/call_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
 import mailSvg from './svg/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
 import addressSvg from './svg/location_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
+import facebookSvg from './svg/facebook.svg';
+import instaSvg from './svg/instagram.svg';
 
 export const createAboutContent = (divContent) => {
   const aboutContainer = document.createElement('div');
@@ -22,6 +24,11 @@ export const createAboutContent = (divContent) => {
       text: 'City | Street 53',
       icon: addressSvg,
     },  
+  ];
+
+  const socialIcons = [
+    facebookSvg,
+    instaSvg,
   ];
 
   const storyDiv = document.createElement('div');
@@ -57,6 +64,17 @@ export const createAboutContent = (divContent) => {
   });
   
   aboutContainer.appendChild(contactSection);
+
+  const socialSection = document.createElement('div');
+  socialSection.classList.add('social-section');
+
+  socialIcons.forEach((entry) => {
+    const entryIcon = document.createElement('img');
+    entryIcon.src = entry;
+    socialSection.appendChild(entryIcon);
+  });
+
+  aboutContainer.appendChild(socialSection);
 
   divContent.appendChild(aboutContainer);
 };

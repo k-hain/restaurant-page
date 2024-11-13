@@ -176,3 +176,16 @@ nav button {
   gap: var(--padding);
   margin: 0 auto 0;
 }
+
+.social-section {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--padding);
+  margin: 0 auto 0;
+}
+
+.social-section img {
+  width: 64px;
+}
