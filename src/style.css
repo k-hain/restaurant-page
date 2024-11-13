@@ -61,7 +61,7 @@ button {
   --color-black: rgb(0, 0, 0);
   --color-gray: rgb(224, 224, 224);
   --color-gray-dark: rgb(180, 180, 180);
-  --color-primary: rgb(49, 6, 167);  
+  --color-primary: rgb(10, 0, 22);  
   --color-secondary: rgb(0, 211, 165);
   --color-shadow: rgba(20, 20, 40, 0.3);
 
@@ -73,7 +73,7 @@ button {
 
   --border-radius: 16px;
 
-  --navbar-height: 64px;
+  --navbar-height: 80px;
 }
 
 body {
@@ -82,16 +82,33 @@ body {
 
 nav {
   display: grid;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   justify-items: center;
   grid-template-rows: var(--navbar-height);
-  grid-template-columns: repeat(3, 96px);
+  grid-template-columns: 48px repeat(3, 96px);
   height: var(--navbar-height);
+  gap: var(--padding);
+  padding: 0 var(--padding-double) 0;
+  background-color: var(--color-primary);
+}
+
+#logo {
+  width: 48px;
+  filter: invert(71%) sepia(80%) saturate(4061%) hue-rotate(126deg) brightness(102%) contrast(101%);
 }
 
 nav button {
   font-size: 1.25rem;
+  color: var(--color-white);
+  justify-self: stretch;
+  align-self: stretch;
+  text-align: center;
+}
+
+nav button:hover {
+  color: var(--color-black);
+  background-color: var(--color-secondary);
 }
 
 .hero-container {
