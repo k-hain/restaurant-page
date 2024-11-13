@@ -1,6 +1,6 @@
-import phoneSvg from './svg/call_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
-import mailSvg from './svg/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
-import addressSvg from './svg/location_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
+import phoneSvg from './svg/call.svg';
+import mailSvg from './svg/mail.svg';
+import addressSvg from './svg/location.svg';
 import facebookSvg from './svg/facebook.svg';
 import instaSvg from './svg/instagram.svg';
 

@@ -2,7 +2,7 @@ import './style.css';
 import { createHomeContent } from './home.js';
 import { createMenuContent } from './menu.js';
 import { createAboutContent } from './about.js';
-import logoSvg from './svg/ramen_dining_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg';
+import logoSvg from './svg/ramen.svg';
 
 class displayController {
   static #divContent = document.querySelector('#content');
