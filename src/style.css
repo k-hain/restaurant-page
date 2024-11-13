@@ -62,7 +62,10 @@ button {
   --color-gray: rgb(224, 224, 224);
   --color-gray-dark: rgb(180, 180, 180);
   --color-primary: rgb(49, 6, 167);  
-  --color-secondary: rgb(0, 211, 165); 
+  --color-secondary: rgb(0, 211, 165);
+  --color-shadow: rgba(20, 20, 40, 0.3);
+
+  --shadow-card: var(--color-shadow) 0px 4px 12px;
 
   --padding: 16px;
   --padding-half: calc(var(--padding) / 2);
@@ -105,4 +108,41 @@ nav button {
 .hero-container h1 {
   font-size: 6rem;
   color: var(--color-white);
+}
+
+.menu-container {
+  height: calc(100vh - var(--navbar-height));
+  display: grid;
+  justify-content: center;
+  padding: var(--padding-double);
+  grid-template-columns: repeat(2, 512px);
+  grid-template-rows: repeat(2, 320px);
+  gap: var(--padding-double);
+  background-color: var(--color-gray);
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background-color: var(--color-white);
+}
+
+.menu-item-header {
+  padding: var(--padding-half);
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item-header h2 {
+  font-size: 2.5rem;
+}
+
+.menu-item-img {
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
 }
