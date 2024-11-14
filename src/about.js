@@ -32,8 +32,9 @@ export const createAboutContent = (divContent) => {
   ];
 
   const storyDiv = document.createElement('div');
-  storyDiv.classList.add('story-section');
+  storyDiv.classList.add('sub-section');
   const storyHeader = document.createElement('h1');
+  storyHeader.classList.add('section-header');
   storyHeader.textContent = 'Our Story';
   const storyText = document.createElement('p');
   storyText.textContent =
@@ -46,6 +47,14 @@ export const createAboutContent = (divContent) => {
   storyDiv.appendChild(storyHeader);
   storyDiv.appendChild(storyText);
   aboutContainer.appendChild(storyDiv);
+
+  const findusSection = document.createElement('div');
+  findusSection.classList.add('sub-section');
+
+  const contactHeader = document.createElement('h1');
+  contactHeader.classList.add('section-header');
+  contactHeader.textContent = 'Contact';
+  findusSection.appendChild(contactHeader);
 
   const contactSection = document.createElement('div');
   contactSection.classList.add('contact-section');
@@ -63,7 +72,7 @@ export const createAboutContent = (divContent) => {
     contactSection.appendChild(entryDiv);
   });
   
-  aboutContainer.appendChild(contactSection);
+  findusSection.appendChild(contactSection);
 
   const socialSection = document.createElement('div');
   socialSection.classList.add('social-section');
@@ -74,7 +83,9 @@ export const createAboutContent = (divContent) => {
     socialSection.appendChild(entryIcon);
   });
 
-  aboutContainer.appendChild(socialSection);
+  findusSection.appendChild(socialSection);
+
+  aboutContainer.appendChild(findusSection);
 
   divContent.appendChild(aboutContainer);
 };

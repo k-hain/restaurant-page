@@ -193,10 +193,15 @@ nav button:hover {
   display: flex;
   flex-direction: column;
   gap: var(--padding-double);
+  padding: var(--padding-double) var(--padding) var(--padding-double);
 }
 
-.story-section h1 {
-  margin-bottom: var(--padding);
+.section-header {
+  margin-bottom: var(--padding-double);
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  display: inline-block;
+  padding: 0 var(--padding-half) 0;
 }
 
 .contact-section {
@@ -204,7 +209,7 @@ nav button:hover {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: var(--padding);
-  margin: 0 auto 0;
+  margin: 0 auto var(--padding-double);
 }
 
 .social-section {
@@ -218,4 +223,9 @@ nav button:hover {
 
 .social-section img {
   width: 64px;
+}
+
+.social-section img,
+.contact-section img {
+  filter: invert(58%) sepia(89%) saturate(2061%) hue-rotate(125deg) brightness(100%) contrast(101%);
 }
