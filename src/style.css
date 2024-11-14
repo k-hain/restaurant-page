@@ -136,24 +136,29 @@ nav button:hover {
 }
 
 .menu-container {
-  height: calc(100vh - var(--navbar-height));
   display: grid;
   justify-content: center;
   padding: var(--padding-double);
-  grid-template-columns: repeat(2, 512px);
-  grid-template-rows: repeat(2, 320px);
+  grid-template-columns: repeat(2, 480px);
+  grid-template-rows: repeat(2, 480px);
   gap: var(--padding-double);
-  background-color: var(--color-gray);
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  background-color: var(--color-white);
+  border: var(--padding) solid transparent;
+}
+
+.menu-item:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  border: var(--padding) solid var(--color-secondary);
+}
+
+.menu-item:hover .menu-item-img {
+  filter: brightness(110%);
 }
 
 .menu-item-header {
