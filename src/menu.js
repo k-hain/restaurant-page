@@ -4,6 +4,9 @@ import ramen3Img from './img/caleb-wright-i6Mb2EzQ4hM-unsplash.jpg';
 import ramen4Img from './img/sharon-chen-L1ZhjK-R6uc-unsplash.jpg';
 
 export const createMenuContent = (divContent) => {
+  const sectionContainer = document.createElement('div');
+  sectionContainer.classList.add('section');
+
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menu-container');
 
@@ -26,6 +29,15 @@ export const createMenuContent = (divContent) => {
     },
   ];
 
+  const menuHeader = document.createElement('h1');
+  menuHeader.classList.add('section-header');
+  menuHeader.textContent = 'Menu';
+  const headerWrapper = document.createElement('div');
+  headerWrapper.classList.add('sub-section');
+
+  headerWrapper.appendChild(menuHeader);
+  sectionContainer.appendChild(headerWrapper);
+
   ramenData.forEach((item) => {
     const menuItem = document.createElement('div');
     menuItem.classList.add('menu-item');
@@ -46,5 +58,7 @@ export const createMenuContent = (divContent) => {
     menuContainer.appendChild(menuItem);
   });
 
-  divContent.appendChild(menuContainer);
+  sectionContainer.appendChild(menuContainer);
+
+  divContent.appendChild(sectionContainer);
 };
